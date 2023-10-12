@@ -1,0 +1,47 @@
+<view class="page-body">
+  <view class="page-section">
+    <view class="page-section-title">请选择会议室</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">开始使用时间</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindinput="input1"type="number" placeholder="8-18整点" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">结束使用时间（请大于开始时间）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindinput="input2"type="number" placeholder="8-18整点" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">请输入姓名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindinput="input3"type="text" placeholder="姓名"/>
+      </view>
+    </view>
+  </view>
+  <view class="btn-area" id="buttonContainer">
+    <view class="button-sp-area">
+      <button type="primary"bindtap="show" plain="true">查询</button>
+      <button type="primary"bindtap="submit" plain="true">预定</button>
+      <button type="primary"bindtap="detail_show" plain="true">详细查询</button>
+      </view>
+    </view>
+   
+</view>
